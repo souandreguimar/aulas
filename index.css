@@ -1,27 +1,13 @@
 body{
 
-.foto{
-width: 20px;
-height: 20px;
-}
-
-
-
 #principal{
     display:flex ;
     flex-wrap: nowrap;
     background-color: green;
     width: 400px;
-
 }
 
-#foto{
-    width: 100px;
-    height: 100px;
-
-}
 #txt{
-    text-decoration-line: none;
-   
+    text-decoration-line: none;   
 }
 }
