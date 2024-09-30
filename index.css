@@ -1,9 +1,10 @@
 body{
 
 
-.foto{
-width: 20px;
-height: 20px;
+#foto{
+    width: 100px;
+    height: 100px;
+
 }
 
 #principal{
