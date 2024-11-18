@@ -1,0 +1,161 @@
+<!-- Calculo de Media e Situação-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 1</title>
+</head>
+
+<body> 
+    <p> CALCULA DE MEDIA EM JS</p>
+
+    
+    <input type="text" id="nota1" placeholder="Insira a Primeira Nota"><br><br>
+    <input type="text" id="nota2" placeholder="Insira a Segunda Nota"><br><br>
+    
+    <button onclick="calculoMedia()"> CLIQUE AQUI PRA INICIAR</button>
+    <p>Situação do Aluno: <span id="resultado"></span> </p>
+    <script>
+        function calculoMedia(){
+            
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let media = (nota1+nota2)/2; 
+            if(media>=7){
+                document.getElementById("resultado").innerHTML = "Aprovado";
+                document.getElementById("resultado").style.color = 'green';
+
+            } else
+            {
+                document.getElementById("resultado").innerHTML = "Reprovado";
+                document.getElementById("resultado").style.color = 'red';
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- Calculo de IMC--> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <html lang="pt-br">
+    <title> Indice de massa corporal </title>
+    </head>
+    <body>
+        
+        <form id="form1">
+            <label>Insira os Dados Para Calculo do IMC</label>    <br>
+            <input type="text" id="nome" placeholder="nome"> <br>
+            
+            <input type="text" id="altura" placeholder="altura"><br>
+            
+            <input type="text" id="peso" placeholder="peso"> <br>
+                       
+            <input type="button" onClick="imc()" value="calcular">
+            <br>
+            <br>
+            <label>Situação: <span id="resultado"></span></label>
+        </form>
+            <script>
+                function imc() {
+                let altura = document.getElementById("altura").value;
+                let peso = document.getElementById("peso").value;
+                let nome = document.getElementById("nome").value;    
+                let m = peso / (altura * altura);
+              
+        
+                    if (m < 20){
+                        document.getElementById("resultado").innerHTML = 'Baixo peso muito grave';
+                    } else if (m > 20 && m < 25) {
+                        document.getElementById("resultado").innerHTML = 'Baixo peso grave';
+                    } else if (m > 25 && m < 30) {
+                        document.getElementById("resultado").innerHTML = 'Baixo peso';
+                    } else if (m > 30 && m < 35) {
+                        document.getElementById("resultado").innerHTML = 'Peso normal';
+                    } else if (m > 35 && m < 40) {
+                        document.getElementById("resultado").innerHTML =  'Sobrepeso';
+                    } else if (m > 40 && m < 45) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de primeiro grau';
+                    } else if (m > 55 && m < 50) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de segundo grau'; 
+                    } else if (m > 50) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de terceiro grau';
+                    }
+                 }
+            </script>
+            
+            
+</body>
+</html>
+
+
+
+<!-- Listas e APEENDCHILE -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The appendChild() Method</h2>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+
+    <br>
+    <input type="text" id="palavra">
+    <br>
+    <input type="radio" name="cores" value="red" id="red">
+    <label for="red">Vermelho</label>
+    <input type="radio" name="cores" value="green" id="green">
+    <label for="green">Verde</label>
+    <input type="radio" name="cores" value="blue" id="blue">
+    <label for="blue">Azul</label>
+    
+    <p>Click "Append" to append an item to the end of the list:</p>
+
+    <button onclick="myFunction()">Append</button>
+
+    <script>
+        function myFunction() {
+
+            // Create an "li" node:
+            const node = document.createElement("li");
+
+            // Create a text node:
+            let palavra = document.getElementById('palavra').value;
+            const textnode = document.createTextNode(palavra);
+
+            // Append the text node to the "li" node:
+            node.appendChild(textnode);
+
+            // Append the "li" node to the list:
+            let cor = document.querySelector('input[name="cores"]:checked').value;
+            
+            document.getElementById("myList").appendChild(node);
+            node.style.color = cor;
+        }
+    </script>
+</body>
+
+</html>
